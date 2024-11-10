@@ -1,0 +1,110 @@
+/* register.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: visible;
+  padding: 15px;
+  background: #f4f4f4;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+  padding: 25px 35px;
+}
+
+.container h2 {
+  border-radius: 5px 5px 0 0;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.container label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  margin-top: 15px;
+  display: block;
+}
+
+.container input[type='text'],
+.container input[type='email'],
+.container input[type='password'],
+.container input[type='file'],
+.container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  transition: all 0.3s ease;
+}
+
+.container input[type='text']:focus,
+.container input[type='email']:focus,
+.container input[type='password']:focus,
+.container textarea:focus {
+  border-color: #3563e9;
+}
+
+.container textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.container button[type='submit'] {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  background: #3563e9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container button[type='submit']:hover {
+  background: #2a50b5;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+.login-link a {
+  text-decoration: none;
+  color: #3563e9;
+}
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}

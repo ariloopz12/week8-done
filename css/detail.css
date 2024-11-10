@@ -1,0 +1,633 @@
+:root {
+  --primary: #fff;
+  --bg: #c2d3fe;
+  --button: #3563e9;
+  --text: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--primary);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%; /* Sesuaikan padding jika perlu */
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--button);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.navbar .navbar-logo span {
+  color: var(--button);
+  font-style: italic;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center; /* Pastikan align-items center di sini */
+}
+
+.navbar .navbar-nav a {
+  color: var(--text);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  text-decoration: none;
+  line-height: 1; /* Sesuaikan line-height */
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--button);
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--button);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra {
+  display: flex;
+  align-items: center; /* Pastikan align-items center di sini */
+}
+
+.navbar .navbar-extra .icon {
+  color: var(--text);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.navbar .navbar-extra .icon:hover {
+  color: var(--button);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.btn-masuk {
+  background-color: var(--button);
+  color: var(--primary);
+  padding: 0.8rem 1rem; /* Sesuaikan padding agar lebih sejajar */
+  border-radius: 5px;
+  font-size: 1.1rem; /* Sesuaikan font-size jika perlu */
+  font-weight: 500;
+  margin-left: 1rem;
+  text-decoration: none;
+  line-height: 1; /* Pastikan line-height sama */
+}
+
+.btn-masuk:hover {
+  background-color: var(--primary);
+  color: var(--text);
+  border: 1px solid var(--button);
+}
+
+/* Navbar Search Form */
+
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
+}
+
+/* Shopping Cart */
+.shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 100vh;
+  width: 35rem;
+  padding: 0 1.5rem;
+  background-color: #fff;
+  color: var(--bg);
+}
+
+.shopping-cart.active {
+  right: 0;
+  transition: 0.3s linear;
+}
+
+.shopping-cart .cart-item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #666;
+  position: relative;
+}
+
+.shopping-cart img {
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.shopping-cart h3 {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.shopping-cart .item-price {
+  font-size: 1.2rem;
+}
+
+.shopping-cart .remove-item {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.shopping-cart .remove-item:hover {
+  color: var(--primary);
+}
+
+/* Detail Program Section Styling */
+.program-detail {
+  padding: 6rem 5%;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center; /* Memusatkan kontainer */
+}
+
+.program-detail .container {
+  max-width: 1200px; /* Menentukan lebar maksimum agar konten terpusat */
+  width: 100%;
+  margin: 0 auto; /* Memastikan kontainer berada di tengah */
+}
+
+.program-detail h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.program-detail h2 span {
+  color: #3563e9; /* Warna utama */
+}
+
+.program-detail p {
+  text-align: start;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.program-detail .program-info {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center; /* Memusatkan isi program-info */
+}
+
+.program-detail .program-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.program-detail .info {
+  max-width: 600px;
+}
+
+.program-detail .info h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.program-detail .info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.program-detail .info ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.program-detail .info li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.program-detail .info .button {
+  display: inline-block;
+  background-color: #3563e9;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.program-detail .info .button:hover {
+  background-color: #2a50b5;
+}
+
+.program-section {
+  margin-bottom: 2rem;
+}
+
+.program-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3563e9;
+}
+
+.program-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.program-section ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid var(--text);
+  padding: 0.8rem;
+  text-align: left;
+  color: #000;
+}
+
+.schedule-table th {
+  background-color: var(--bg);
+  font-weight: bold;
+}
+
+.instructors li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.button.back-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #aaa;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button.back-button:hover {
+  background-color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .program-detail .program-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .program-detail .program-image {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .program-detail .info {
+    max-width: 100%;
+  }
+
+  .program-detail h2 {
+    font-size: 2rem;
+  }
+
+  .program-detail p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.register-form h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.register-form .input-group {
+  margin-bottom: 1.5rem;
+}
+
+.register-form .input-group input,
+.register-form .input-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.register-form .btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #3563e9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-form .btn:hover {
+  background-color: #2a50b5;
+}
+
+.button.back-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #aaa;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button.back-button:hover {
+  background-color: #888;
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .register-form h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer.socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: var(--text);
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--button);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: var(--text);
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+footer .credit a {
+  color: var(--button);
+  font-weight: 700;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    flex-direction: column;
+    align-items: start; /* Pastikan align-items center di sini */
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 8px;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .modal-content {
+    flex-wrap: wrap;
+  }
+
+  .kategori-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Menampilkan tombol dalam dua kolom */
+    gap: 10px; /* Memberikan jarak antara tombol */
+  }
+
+  .filter-btn {
+    padding: 10px 0; /* Menambah padding untuk ruang yang lebih nyaman */
+    margin: 0; /* Menghilangkan margin agar tombol tidak terjepit */
+    font-size: 1.6rem; /* Sedikit memperbesar ukuran teks pada tombol */
+    border-radius: 15px; /* Menambah kesan yang lebih halus */
+  }
+
+  .program-item {
+    width: 100%; /* Memastikan item program mengambil lebar penuh di layar kecil */
+    margin: 5px 0; /* Memberikan jarak antar item program */
+  }
+}
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

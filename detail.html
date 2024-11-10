@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="css/detail.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Yok <span>Festiv!</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#program">Program</a>
+        <a href="#news">Berita</a>
+        <a href="#contact">About</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search" class="icon"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart" class="icon"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu" class="icon"><i data-feather="menu"></i></a>
+        <a href="./login.html" class="btn-masuk">Masuk</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Detail Program Section Start -->
+    <section class="program-detail" id="program-detail">
+      <div class="container">
+        <h2>Detail <span>Program</span></h2>
+        <p class="sub">Temukan informasi lengkap mengenai program pelatihan Digital Marketing yang kami tawarkan.</p>
+
+        <div class="program-info">
+          <img class="program-image" src="https://images.unsplash.com/photo-1622219809260-ce065fc5277f?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMwNjYxOQ&ixlib=rb-1.2.1&q=85" alt="Digital Marketing" />
+          <div class="info">
+            <h3>Digital Marketing</h3>
+            <p>Pelajari strategi digital marketing terbaru dari para ahli di industri. Program ini dirancang untuk memberikan pemahaman mendalam tentang pemasaran digital, mulai dari dasar hingga teknik lanjutan.</p>
+
+            <!-- Kurikulum -->
+            <div class="program-section">
+              <h4>Kurikulum</h4>
+              <ul>
+                <li>Pengenalan Digital Marketing dan Tren Terkini</li>
+                <li>SEO dan SEM: Strategi Peningkatan Traffic</li>
+                <li>Sosial Media Marketing dan Branding</li>
+                <li>Email Marketing: Strategi dan Analisis</li>
+                <li>Content Marketing dan Copywriting</li>
+                <li>Google Analytics dan Data-driven Marketing</li>
+                <li>Proyek Akhir: Kampanye Digital</li>
+              </ul>
+            </div>
+
+            <!-- Jadwal -->
+            <div class="program-section">
+              <h4>Jadwal</h4>
+              <table class="schedule-table">
+                <tr>
+                  <th>Hari</th>
+                  <th>Waktu</th>
+                  <th>Topik</th>
+                </tr>
+                <tr>
+                  <td>Senin</td>
+                  <td>09:00 - 11:00</td>
+                  <td>SEO dan SEM</td>
+                </tr>
+                <tr>
+                  <td>Rabu</td>
+                  <td>09:00 - 11:00</td>
+                  <td>Sosial Media Marketing</td>
+                </tr>
+                <tr>
+                  <td>Jumat</td>
+                  <td>09:00 - 11:00</td>
+                  <td>Content Marketing</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Informasi Tenaga Pengajar -->
+            <div class="program-section">
+              <h4>Tenaga Pengajar</h4>
+              <ul class="instructors">
+                <li><strong>Jane Doe</strong> - Ahli SEO dan SEM dengan pengalaman lebih dari 10 tahun di bidang digital marketing.</li>
+                <li><strong>John Smith</strong> - Praktisi Sosial Media Marketing, telah membantu lebih dari 50 brand dalam membangun identitas online.</li>
+                <li><strong>Emily Clark</strong> - Ahli Content Marketing dan Copywriting, penulis beberapa buku best-seller tentang pemasaran digital.</li>
+              </ul>
+            </div>
+
+            <!-- Biaya -->
+            <div class="program-section">
+              <h4>Biaya</h4>
+              <p>Rp 2.500.000,- untuk keseluruhan program selama 3 bulan, termasuk akses ke semua materi, komunitas, dan konsultasi dengan mentor.</p>
+              <p><strong>Diskon:</strong> Daftar sebelum akhir bulan dan dapatkan potongan harga sebesar 10%.</p>
+            </div>
+
+            <a href="#!" class="button" onclick="openModal()">Daftar Sekarang</a>
+            <a href="index.html" class="button back-button">Kembali ke Halaman Utama</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Detail Program Section End -->
+
+    <!-- Modal Form Start -->
+    <div class="modal" id="register-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <form class="register-form">
+          <h3>Formulir Pendaftaran</h3>
+          <div class="input-group">
+            <input type="text" placeholder="Nama Lengkap" required />
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <input type="tel" placeholder="Nomor HP" required />
+          </div>
+          <div class="input-group">
+            <textarea placeholder="Pesan (Opsional)" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn">Kirim Pendaftaran</button>
+        </form>
+      </div>
+    </div>
+    <!-- Modal Form End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Program</a>
+        <a href="#menu">Berita</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">ariasin</a>. | &copy; 2024.</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <!-- Footer End -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
